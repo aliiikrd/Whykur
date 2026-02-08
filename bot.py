@@ -45,9 +45,9 @@ TASKS = [
     {
         'id': 'task_1',
         'type': 'channel',
-        'name': 'Example Channel 1',
-        'link': 'https://t.me/example_channel',
-        'chat_id': '@example_channel',  # Channel username or ID
+        'name': 'Hack First',
+        'link': 'https://t.me/HackFirst',
+        'chat_id': '-1001848133160',  # Channel username or ID
         'reward': TASK_REWARD
     },
     {
@@ -274,9 +274,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         f"💫 **How to earn:**\n"
         f"🎁 Daily gifts - {DAILY_REWARD} stars\n"
         f"📋 Complete tasks - {TASK_REWARD} stars each\n"
-        f"👥 Refer friends - {REFERRAL_REWARD} stars per referral\n\n"
-        f"💰 **Withdraw your stars when you reach:**\n"
-        f"{'  •  '.join([f'{amt}⭐️' for amt in WITHDRAWAL_AMOUNTS])}\n\n"
+        f"👥 Refer friends - {REFERRAL_REWARD} stars per referral\n
         f"🚀 Choose an option below to get started!"
     )
     
