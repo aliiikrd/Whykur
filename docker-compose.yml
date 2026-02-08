@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-stars-bot
+    restart: unless-stopped
+    
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMIN_ID=${ADMIN_ID}
+    
+    volumes:
+      # Persist database
+      - ./data:/app/data
+      # Mount database file
+      - ./bot_database.json:/app/bot_database.json
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; exit(0 if os.path.exists('bot_database.json') else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

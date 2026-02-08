@@ -1,0 +1,36 @@
+# =====================================================
+# Telegram Stars Bot Requirements
+# All necessary dependencies for the bot to run
+# =====================================================
+
+# Main Telegram Bot Library
+# This is the official Python wrapper for Telegram Bot API
+python-telegram-bot==20.7
+
+# HTTP Client Library (required by python-telegram-bot)
+# Used for making HTTP requests to Telegram API
+httpx==0.25.2
+
+# Async HTTP support
+# Required for asynchronous operations
+h11==0.14.0
+
+# Certificate verification
+# For secure HTTPS connections
+certifi==2023.11.17
+
+# Character encoding detection
+# Helps with proper text encoding
+charset-normalizer==3.3.2
+
+# URL parsing and manipulation
+idna==3.6
+
+# HTTP core library
+httpcore==1.0.2
+
+# Asynchronous I/O support
+anyio==4.1.0
+
+# Socket and network utilities
+sniffio==1.3.0

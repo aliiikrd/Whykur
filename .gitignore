@@ -1,0 +1,53 @@
+# =====================================================
+# Telegram Stars Bot - Git Ignore File
+# =====================================================
+
+# Environment Variables - NEVER commit these!
+.env
+.env.local
+.env.*.local
+
+# Database Files
+bot_database.json
+bot_database.json.backup
+*.db
+*.sqlite
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/

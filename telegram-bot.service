@@ -1,0 +1,20 @@
+[Unit]
+Description=Telegram Stars Bot Service
+After=network.target
+
+[Service]
+Type=simple
+User=your_username
+WorkingDirectory=/path/to/webapp
+Environment="BOT_TOKEN=your_bot_token_here"
+Environment="ADMIN_ID=your_admin_id_here"
+ExecStart=/usr/bin/python3 /path/to/webapp/bot.py
+Restart=always
+RestartSec=10
+
+# Logging
+StandardOutput=append:/var/log/telegram-bot/bot.log
+StandardError=append:/var/log/telegram-bot/error.log
+
+[Install]
+WantedBy=multi-user.target
