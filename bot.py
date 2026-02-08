@@ -22,8 +22,8 @@ from telegram.ext import (
 # =====================================================
 # CONFIGURATION - Use environment variables for security
 # =====================================================
-BOT_TOKEN = os.getenv('BOT_TOKEN')  # Bot token from BotFather
-ADMIN_ID = int(os.getenv('ADMIN_ID', '0'))  # Admin Telegram ID
+BOT_TOKEN = '8586101763:AAEDdNdiFy6lfMezzbiFwGuKJ88hTOV7t1I';  # Bot token from BotFather
+ADMIN_ID = 7504646622;  # Admin Telegram ID
 
 # =====================================================
 # DATABASE STRUCTURE - Using JSON file for simplicity
